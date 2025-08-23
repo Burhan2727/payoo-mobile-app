@@ -74,6 +74,7 @@
         </div>
         <!-- 3 -->
         <div
+          id="transfer-button"
           class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:border-[#0874F2] hover:bg-[#f4f5f7] hover:text-[#0874F2] transition"
         >
           <img class="mx-auto" src="./assets/money1.png" alt="" />
@@ -81,6 +82,7 @@
         </div>
         <!-- 4 -->
         <div
+          id="bonus-button"
           class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:border-[#0874F2] hover:bg-[#f4f5f7] hover:text-[#0874F2] transition"
         >
           <img class="mx-auto" src="./assets/bonus1.png" alt="" />
@@ -106,7 +108,7 @@
     <!-- form start-->
     <div class="all-form-section max-w-lg mx-auto">
       <!-- add money form start -->
-      <div id="add-money-parent">
+      <div class="form" id="add-money-parent">
         <h1 class="font-semibold text-[20px] p-5">Add Money</h1>
         <form class="bg-white rounded-2xl p-8">
           <!-- select input start -->
@@ -164,7 +166,7 @@
       </div>
       <!-- add money form end -->
        <!-- cash out form start -->
-        <div id="cash-out-parent" style="display: none;">
+        <div class="form" id="cash-out-parent" style="display: none;">
             <h1 class="font-semibold text-[20px] p-5"">Cashout</h1>
             <form class="bg-white rounded-2xl p-8">
           <!-- Bank Account Number input start -->
@@ -207,6 +209,18 @@
         </form>
         </div>
        <!-- cash out form end -->
+        <!-- transfer money form start -->
+         <div class="form" id="transfer-money-parent" style="display: none;">
+            <h1>Transfer Money</h1>
+            
+         </div>
+        <!-- transfer money form end -->
+        <!-- get bonus form start -->
+         <div class="form" id="get-bonus-parent" style="display: none;">
+            <h1>Get Bonus</h1>
+            
+         </div>
+        <!-- get bonus form end -->
     </div>
     <!-- form end-->
      <script src="./home.js"></script>
