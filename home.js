@@ -48,7 +48,6 @@ function handleButtonToggle(id){
 document.getElementById("add-money-btn")
 .addEventListener("click", function(e){
     e.preventDefault();
-    const bank = getInputValue("bank");
     const accountNumber = document.getElementById("account-number").value;
     const amount = getInputValueNumber("add-amount");
     const pin = getInputValueNumber("add-pin");
@@ -131,6 +130,12 @@ document.getElementById("withdraw-btn")
         }
         const totalNewAvailableBalance = availableBalance - transferAmount;
         setInnerText(totalNewAvailableBalance)
+        const transferObj = {
+            name: "Local Transfer",
+            amount: transferAmount,
+            date: new Date().toLocaleTimeString()
+        }
+        transectionData.push(transferObj)
     })
 // transfer features end
 
@@ -156,6 +161,13 @@ document.getElementById("withdraw-btn")
         }
         const totalNewAvailableBalance = availableBalance - payAmount
         setInnerText(totalNewAvailableBalance)
+        
+        const payObj = {
+            name: "Pay Bill",
+            amount: payAmount,
+            date: new Date().toLocaleTimeString()
+        }
+        transectionData.push(payObj)
     })
 // pay bill features end
 
