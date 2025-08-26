@@ -105,9 +105,11 @@
           <h2 class="font-semibold">Transaction</h2>
         </div>
       </div>
+
+      
       <!-- menu end -->
     </div>
-    <!-- form start-->
+    <!-- -----------------------------form start-------------------------------------->
     <div class="all-form-section max-w-lg mx-auto">
       <!-- add money form start -->
       <div class="form" id="add-money-parent">
@@ -163,14 +165,14 @@
             />
           </div>
             <!-- pin number input end -->
-             <button id="add-money-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white">Add Money</button>
+             <button id="add-money-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white hover:bg-[#155db0]">Add Money</button>
         </form>
       </div>
 
       <!-- add money form end -->
        <!-- cash out form start -->
         <div class="form" id="cash-out-parent" style="display: none;">
-            <h1 class="font-semibold text-[20px] p-5"">Cashout</h1>
+            <h1 class="font-semibold text-[20px] p-5">Cashout</h1>
             <form class="bg-white rounded-2xl p-8">
           <!-- Bank Account Number input start -->
           <div>
@@ -208,26 +210,127 @@
             />
           </div>
             <!-- pin number input end -->
-             <button id="withdraw-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white">Withdraw Money</button>
+             <button id="withdraw-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white hover:bg-[#155db0]">Withdraw Money</button>
         </form>
         </div>
        <!-- cash out form end -->
         <!-- transfer money form start -->
          <div class="form" id="transfer-money-parent" style="display: none;">
-            <h1>Transfer Money</h1>
-            
+            <h1 class="font-semibold text-[20px] p-5"">Transfer Money</h1>
+            <form class="bg-white rounded-2xl p-8">
+          <!-- Bank Account Number input start -->
+          <div>
+            <label class="font-semibold" for="">User Account Number</label>
+            <br />
+            <input
+              id="transfer-account"
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+          <!-- Bank Account Number input end -->
+           <!-- ammount to add input start -->
+            <div class="mt-5">
+            <label class="font-semibold" for="">Amount</label>
+            <br />
+            <input
+              id="transfer-amount"
+              type="text"
+              placeholder="Enter amount to transfer"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+           <!-- ammount to add input end -->
+            <!-- pin number input start -->
+             <div class="mt-5">
+            <label class="font-semibold" for="">Pin Number</label>
+            <br />
+            <input
+              id="transfer-pin"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+            <!-- pin number input end -->
+             <button id="transfer-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white hover:bg-[#155db0]">Send Now</button>
+        </form>
          </div>
         <!-- transfer money form end -->
         <!-- get bonus form start -->
          <div class="form" id="get-bonus-parent" style="display: none;">
-            <h1>Get Bonus</h1>
-            
+            <h1 class="font-semibold text-[20px] p-5">Get Bonus</h1>
+            <form class="bg-white rounded-2xl p-8">
+              <div class="mt-5">
+            <label class="font-semibold" for="">Enter Bonus Coupon</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your coupon"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+          <button id="add-money-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white hover:bg-[#155db0]">Get Bonus</button>
+            </form>
          </div>
         <!-- get bonus form end -->
         <!-- pay bill form start -->
          <div class="form" id="pay-bill-parent" style="display: none;">
-            <h1>Pay Bill</h1>
-            
+            <h1 class="font-semibold text-[20px] p-5">Pay Bill</h1>
+            <form class="bg-white rounded-2xl p-8">
+          <!-- select input start -->
+          <div>
+            <h1 class="font-semibold">Select To Pay</h1>
+            <select id="bank" class="select input bg-[#f4f5f7] mt-2 rounded-3xl w-full">
+              <option>Select back</option>
+              <option>Islamic Bank</option>
+              <option>AB Bank</option>
+              <option>Sonali Bank</option>
+              <option>Rupali Bank</option>
+              <option>Dutch Bangla Bank</option>
+            </select>
+          </div>
+          <!-- select input end -->
+
+          <!-- Bank Account Number input start -->
+          <div class="mt-5">
+            <label class="font-semibold" for="">Biller Account Number</label>
+            <br />
+            <input
+              id="pay-account-number"
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+          <!-- Bank Account Number input end -->
+           <!-- ammount to add input start -->
+            <div class="mt-5">
+            <label class="font-semibold" for="">Amount to Pay</label>
+            <br />
+            <input
+              id="pay-amount"
+              type="text"
+              placeholder="Add Amount to pay"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+           <!-- ammount to add input end -->
+            <!-- pin number input start -->
+             <div class="mt-5">
+            <label class="font-semibold" for="">Pin Number</label>
+            <br />
+            <input
+              id="pay-pin"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+            <!-- pin number input end -->
+             <button id="pay-bill-btn" type="submit" class="btn mt-5 w-full rounded-3xl bg-[#0874f2] text-white hover:bg-[#155db0]">Pay Now</button>
+        </form>
          </div>
         <!-- pay bill form end -->
         <!-- transection form start -->

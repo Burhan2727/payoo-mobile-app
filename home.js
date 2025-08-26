@@ -109,6 +109,56 @@ document.getElementById("withdraw-btn")
 })
 // cashout features end
 
+// transfer features start
+    document.getElementById("transfer-btn")
+    .addEventListener("click", function(e){
+        e.preventDefault();
+        const transferAccount = document.getElementById("transfer-account").value;
+        const availableBalance = getInnerText("available-balance")
+        const transferAmount = getInputValueNumber("transfer-amount");
+        const transferPin = getInputValueNumber("transfer-pin");
+        if(transferAccount.length < 11){
+            alert("please provide a valid transfer account number")
+            return
+        }
+        if(transferAmount > availableBalance || transferAmount <= 0){
+            alert("Invalid ammount")
+            return
+        }
+        if(transferPin !== validPin){
+            alert("Invalid Pin");
+            return
+        }
+        const totalNewAvailableBalance = availableBalance - transferAmount;
+        setInnerText(totalNewAvailableBalance)
+    })
+// transfer features end
+
+// pay bill features start
+    document.getElementById("pay-bill-btn")
+    .addEventListener("click", function(e){
+        e.preventDefault();
+        const payAccountNumber = document.getElementById("pay-account-number").value;
+        const payAmount = getInputValueNumber("pay-amount");
+        const availableBalance = getInnerText("available-balance");
+        const payPin = getInputValueNumber("pay-pin");
+        if(payAccountNumber.length < 11){
+            alert("Invalid account number")
+            return
+        }
+        if(payAmount > availableBalance){
+            alert("Insufficient Balance")
+            return
+        }
+        if(payPin !== validPin){
+            alert("Invalid Pin")
+            return
+        }
+        const totalNewAvailableBalance = availableBalance - payAmount
+        setInnerText(totalNewAvailableBalance)
+    })
+// pay bill features end
+
 // transection feature start
     document.getElementById("transections-button")
     .addEventListener("click", function(){
